@@ -15,6 +15,11 @@ class App extends Component {
   render() {
     return(
       <main className='App'>
+      <header>
+        <button>
+        Moldy Pears
+        </button>
+      </header>
         <MovieContainer movies={this.state.movies} />
       </main>
     )

@@ -3,9 +3,13 @@ import './MoviesCard.css';
 
 const MoviesCard = (props) => {
 	return <div className='card'>
-    <h1>{props.title}</h1>
-    <h1>{props.rating}</h1>
-    <img className='movie-poster' src={props.imageUrl}></img>
+		<div className='rating-container'>
+			<h1 className='movie-rating'>{props.rating.toFixed(1)}</h1>
+		</div>
+    <img className='movie-poster' src={props.imageUrl}>
+		</img>
+		<h1 className='movie-title'>{props.title}</h1>
+
   </div>;
 };
 

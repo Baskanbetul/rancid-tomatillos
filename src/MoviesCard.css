@@ -1,9 +1,33 @@
 .card {
   width: 5vw;
   height: 8vh;
+  margin: 0;
 }
 
 .movie-poster {
-  width: 200px;
-  height: 350px; 
+  width: 10vw;
+  height: 25vh;
+}
+
+.movie-title {
+  font-size: 1rem;
+  width: 10vw;
+}
+
+.movie-rating {
+  color: red;
+  font-size: 1.2rem;
+  margin: 0;
+}
+
+.rating-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  /* background-color: rgba(223, 232, 219, 1); */
+  background-color: yellow; 
+  float: left;
 }
