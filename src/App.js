@@ -2,19 +2,20 @@
 import './App.css';
 import { Component } from 'react';
 import MovieContainer from './MovieContainer.js'
+import movieData from './movieData';
 
 class App extends Component {
   constructor() {
     super();
     this.state = {
-      movies: []
+      movies: movieData.movies
     }
   }
 
   render() {
     return(
       <main className='App'>
-        <h1>BlueBee</h1>
+        <MovieContainer movies={this.state.movies} />
       </main>
     )
   }
