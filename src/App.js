@@ -1,4 +1,4 @@
-// import logo from './logo.svg';
+
 import './App.css';
 import { Component } from 'react';
 import MovieContainer from './MovieContainer.js'
@@ -15,7 +15,6 @@ class App extends Component {
   }
 
   handleChange = (id) => {
-    // console.log(id, "ID!!!!")
     const movie = this.state.movies.find(movie => movie.id === id)
     this.setState({individualMovie: movie})
   }
@@ -28,11 +27,9 @@ class App extends Component {
     return(
       <main className='App'>
       <header>
-        <button onClick={this.handleClick}>
-        Moldy Pears
-        </button>
+        <button onClick={this.handleClick}>Moldy Pears</button>
       </header>
-      {this.state.individualMovie ? <FocusCard movie={this.state.individualMovie}/> : <MovieContainer movies={this.state.movies} handleChange={this.handleChange} /> }
+        {this.state.individualMovie ? <FocusCard movie={this.state.individualMovie}/> : <MovieContainer movies={this.state.movies} handleChange={this.handleChange} /> }
       </main>
     )
    }
