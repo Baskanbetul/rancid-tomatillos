@@ -1,0 +1,35 @@
+
+.focus-card {
+  width: 60vw;
+  height: 55vh;
+  padding: 3vw;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.movie-poster-large {
+    width: 15vw;
+    height: 40vh;
+    margin: 0;
+}
+
+.movie-specs {
+  background: rgb(255,255,255, .7);
+  font-size: .6rem;
+  width: 15vw;
+  height: 15vh;
+  border-radius: 2%;
+  margin-top: 2vh;
+}
+
+.details {
+  margin: 0;
+  margin-left: 1vw;
+}
+
+.movie-overview {
+  width: 30vw;
+  height: 40vh;
+  background: rgb(255,255,255, .7);
+  border-radius: 2%;
+}
