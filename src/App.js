@@ -3,13 +3,21 @@ import './App.css';
 import { Component } from 'react';
 import MovieContainer from './MovieContainer.js'
 import movieData from './movieData';
+import FocusCard from './FocusCard';
 
 class App extends Component {
   constructor() {
     super();
     this.state = {
-      movies: movieData.movies
+      movies: movieData.movies,
+      individualMovie: null
     }
+  }
+
+  handleChange = (id) => {
+    // console.log(id, "ID!!!!")
+    const movie = this.state.movies.find(movie => movie.id === id)
+    this.setState({individualMovie: movie})
   }
 
   render() {
@@ -20,10 +28,11 @@ class App extends Component {
         Moldy Pears
         </button>
       </header>
-        <MovieContainer movies={this.state.movies} />
+      {this.state.individualMovie ? <FocusCard movie={this.state.individualMovie}/> : <MovieContainer movies={this.state.movies} handleChange={this.handleChange} /> }
       </main>
     )
-  }
+   }
 }
+
 
 export default App;

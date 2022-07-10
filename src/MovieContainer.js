@@ -2,7 +2,7 @@ import React from "react";
 import MoviesCard from './MoviesCard.js';
 import './MovieContainer.css';
 
-const MovieContainer = ({movies}) => {
+const MovieContainer = ({movies,handleChange}) => {
   const cards = movies.map(movie => {
     return (
       <MoviesCard
@@ -11,6 +11,7 @@ const MovieContainer = ({movies}) => {
       key={movie.id}
       imageUrl={movie.poster_path}
       rating={movie.average_rating}
+      handleChange={handleChange}
       />
       );
     });

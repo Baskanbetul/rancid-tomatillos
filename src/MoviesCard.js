@@ -2,7 +2,7 @@ import React, { Component }from "react";
 import './MoviesCard.css';
 
 const MoviesCard = (props) => {
-	return <div className='card'>
+	return <div className='card' onClick={() => props.handleChange(props.id)}>
 		<div className='rating-container'>
 			<h1 className='movie-rating'>{props.rating.toFixed(1)}</h1>
 		</div>
