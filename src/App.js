@@ -10,7 +10,8 @@ class App extends Component {
     super();
     this.state = {
       movies: movieData.movies,
-      individualMovie: null
+      individualMovie: null,
+      error: null
     }
   }
 
@@ -20,8 +21,7 @@ class App extends Component {
 			.then((data) => {this.setState({movies: data.movies});
 			})
 			.catch((error) => {
-				console.log(error);
-				this.setState({});
+        this.setState({ error:`Sorry looks like there is a ${error.message} error, please try again later`});
 			});
   }
 
@@ -40,7 +40,8 @@ class App extends Component {
       <main className='App'>
       <header>
         <button onClick={this.handleClick}>Moldy Pears</button>
-      </header>
+      </header> 
+        {this.state.error && <h1>{this.state.error}</h1>}
         {this.state.individualMovie ? <FocusCard movie={this.state.individualMovie}/> : <MovieContainer movies={this.state.movies} handleChange={this.handleChange} /> }
       </main>
     )
