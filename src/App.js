@@ -20,11 +20,15 @@ class App extends Component {
     this.setState({individualMovie: movie})
   }
 
+  handleClick = (event) => {
+    this.setState({individualMovie: null})
+  }
+
   render() {
     return(
       <main className='App'>
       <header>
-        <button>
+        <button onClick={this.handleClick}>
         Moldy Pears
         </button>
       </header>
