@@ -26,8 +26,9 @@ class App extends Component {
   }
 
   handleChange = (id) => {
-    const movie = this.state.movies.find(movie => movie.id === id)
-    this.setState({individualMovie: movie})
+    fetch(`https://rancid-tomatillos.herokuapp.com/api/v2/movies/${id}`)
+    .then(response => response.json())
+    .then(data => {this.setState({ individualMovie: data.movie })})
   }
 
   handleClick = (event) => {
