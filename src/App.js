@@ -10,13 +10,25 @@ class App extends Component {
     super();
     this.state = {
       movies: movieData.movies,
-      individualMovie: null
+      individualMovie: null,
+      error: null
     }
   }
 
+  componentDidMount = () => {
+    fetch('https://rancid-tomatillos.herokuapp.com/api/v2/movies')
+			.then((response) => response.json())
+			.then((data) => {this.setState({movies: data.movies});
+			})
+			.catch((error) => {
+        this.setState({ error:`Sorry looks like there is a ${error.message} error, please try again later`});
+			});
+  }
+
   handleChange = (id) => {
-    const movie = this.state.movies.find(movie => movie.id === id)
-    this.setState({individualMovie: movie})
+    fetch(`https://rancid-tomatillos.herokuapp.com/api/v2/movies/${id}`)
+    .then(response => response.json())
+    .then(data => {this.setState({ individualMovie: data.movie })})
   }
 
   handleClick = (event) => {
@@ -28,7 +40,8 @@ class App extends Component {
       <main className='App'>
       <header>
         <button onClick={this.handleClick}>Moldy Pears</button>
-      </header>
+      </header> 
+        {this.state.error && <h1>{this.state.error}</h1>}
         {this.state.individualMovie ? <FocusCard movie={this.state.individualMovie}/> : <MovieContainer movies={this.state.movies} handleChange={this.handleChange} /> }
       </main>
     )
