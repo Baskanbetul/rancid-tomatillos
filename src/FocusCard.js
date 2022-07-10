@@ -4,7 +4,7 @@ import './FocusCard.css'
 const FocusCard = ({movie}) => {
 		return (
 			<div className='focus-card' style={{backgroundImage: `url(${movie.backdrop_path})`,
-			backgroundRepeat: "no-repeat", backgroundSize: 'contain',}}>
+			backgroundRepeat: "no-repeat", backgroundSize: 'cover',}}>
     		<img className='movie-poster-large' src={movie.poster_path}></img>
 				<div className='movie-overview'>
 					<h1>{movie.title}</h1>
