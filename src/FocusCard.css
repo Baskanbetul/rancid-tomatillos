@@ -5,6 +5,7 @@
   opacity: 95%;
   display: flex;
   justify-content: center;
+  align-content: center;
 }
 
 .focus-card {
@@ -13,6 +14,8 @@
   display: grid;
   column-gap: 2vw;
   grid-template-columns: repeat(2, 1fr);
+  margin-right: 15vw;
+  margin-top: 3vh;
 }
 
 .movie-poster-large {
