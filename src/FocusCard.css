@@ -1,10 +1,21 @@
 
+.background {
+  width: 100%;
+  height: 100%;
+  opacity: 95%;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+
 .focus-card {
-  width: 60vw;
-  height: 55vh;
-  padding: 3vw;
+  width: 50vw;
+  height: 65vh;
   display: grid;
+  column-gap: 2vw;
   grid-template-columns: repeat(2, 1fr);
+  margin-right: 15vw;
+  margin-top: 3vh;
 }
 
 .movie-poster-large {
@@ -15,7 +26,7 @@
 
 .movie-specs {
   background: rgb(255,255,255, .7);
-  font-size: .6rem;
+  font-size: .5rem;
   width: 15vw;
   height: 15vh;
   border-radius: 2%;
@@ -28,8 +39,8 @@
 }
 
 .movie-overview {
-  width: 30vw;
-  height: 40vh;
+  width: 50vw;
+  height: 50vh;
   background: rgb(255,255,255, .7);
   border-radius: 2%;
 }

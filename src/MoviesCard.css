@@ -31,7 +31,10 @@
   width: 35px;
   height: 35px;
   border-radius: 50%;
-  /* background-color: rgba(223, 232, 219, 1); */
-  background-color: yellow;
+  background-color: rgba(223, 232, 219, .8);
   float: left;
+  margin-left: 5px;
+  margin-bottom: -50px;
+  position: relative;
+  z-index: 1;
 }
