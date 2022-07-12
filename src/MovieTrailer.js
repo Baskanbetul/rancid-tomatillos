@@ -1,4 +1,5 @@
 import React from 'react'
+import ReactPlayer from 'react-player';
 
 const MovieTrailer = ({trailer}) => {
 
@@ -6,14 +7,12 @@ const MovieTrailer = ({trailer}) => {
     return video.type === "Trailer"
   })
   return (
-    // HERE 
+    // HERE
     <div>
-      <video width="320" height="240" controls>
-        <source src={`${findTrailer.site}.com/embed/${findTrailer.key}`}/>
-      </video>
+        <ReactPlayer url={`https://www.youtube.com/watch?v=${findTrailer.key}`} />
     </div>
   )
     }
-  
+
 
 export default MovieTrailer;
