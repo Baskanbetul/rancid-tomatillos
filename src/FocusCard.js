@@ -1,7 +1,8 @@
 import React from 'react'
 import './FocusCard.css'
+import MovieTrailer from './MovieTrailer';
 
-const FocusCard = ({movie}) => {
+const FocusCard = ({movie, trailer}) => {
 		return (
 			<div className='background' style={{backgroundImage: `url(${movie.backdrop_path})`,
 			backgroundRepeat: "no-repeat", backgroundSize: 'cover',}}>
@@ -10,7 +11,7 @@ const FocusCard = ({movie}) => {
 					<div className='movie-overview'>
 						<h1>{movie.title}</h1>
 						<p>{movie.overview}</p>
-						<div> Movie TRAILER </div>
+						<MovieTrailer trailer={trailer} />
 					</div>
 					<div className='movie-specs'>
 						<h1 className='details'>{movie.genre}</h1>
