@@ -11,7 +11,8 @@ class App extends Component {
     this.state = {
       movies: movieData.movies,
       individualMovie: null,
-      error: null
+      error: null,
+      movieTrailer: null
     }
   }
 
@@ -27,12 +28,19 @@ class App extends Component {
 
   handleChange = (id) => {
     fetch(`https://rancid-tomatillos.herokuapp.com/api/v2/movies/${id}`)
-    .then(response => response.json())
-    .then(data => {this.setState({ individualMovie: data.movie })})
+			.then((response) => response.json())
+			.then((data) => {
+				this.setState({ individualMovie: data.movie });
+			})
+			fetch(`https://rancid-tomatillos.herokuapp.com/api/v2/movies/${id}/videos`)
+      .then(response => response.json())
+      .then(data => {
+        this.setState({movieTrailer:data.videos})
+      })
   }
 
   handleClick = (event) => {
-    this.setState({individualMovie: null})
+    this.setState({individualMovie: null, movieTrailer: null})
   }
 
   render() {
@@ -42,7 +50,7 @@ class App extends Component {
         <button onClick={this.handleClick}>Moldy Pears</button>
       </header>
         {this.state.error && <h1>{this.state.error}</h1>}
-        {this.state.individualMovie ? <FocusCard movie={this.state.individualMovie}/> : <MovieContainer movies={this.state.movies} handleChange={this.handleChange} /> }
+        {this.state.individualMovie ? <FocusCard movie={this.state.individualMovie} trailer={this.state.movieTrailer}/> : <MovieContainer movies={this.state.movies} handleChange={this.handleChange} /> }
       </main>
     )
    }
