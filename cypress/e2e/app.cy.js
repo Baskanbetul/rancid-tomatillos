@@ -24,8 +24,20 @@ it('User should see all movies', () => {
 })
 
 it('Should show error message if server is down', () => {
-  cy.intercept('GET', 'https://rancid-tomatillos.herokuapp.com/api/v2/movies', {
+  cy.intercept('https://rancid-tomatillos.herokuapp.com/api/v2/movies', {
     statusCode: 500
   })
 })
+
+//when a user clicks on a movie icon the view should change to the focus card.
+
+it('should see new movie information when user clicks on movie icon', () => {
+  cy.get('.movie-container').within(() => {
+    cy.get('.card').eq(1).click()
+
+    // assert url
+  //  cy.url().should('contain', //MOVIE ID WE WANT TO TEST)
+  })
+})
+
 })
