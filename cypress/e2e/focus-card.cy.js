@@ -34,7 +34,7 @@ it('Should see extra info about movie after click it', () => {
 it('Should have a trailer if there is one', () => {
   cy.get('.focus-card').within(() => {
     cy.get('.movie-overview').within(() => {
-      cy.get('MovieTrailer');
+      cy.get('MovieTrailer'); //HERE WE ll keep looking at it 
     })
   })
 })
