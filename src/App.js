@@ -4,6 +4,7 @@ import { Component } from 'react';
 import MovieContainer from './MovieContainer.js'
 import movieData from './movieData';
 import FocusCard from './FocusCard';
+import { Router } from 'react-router-dom'
 
 class App extends Component {
   constructor() {
