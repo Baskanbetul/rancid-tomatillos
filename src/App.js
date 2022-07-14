@@ -52,7 +52,7 @@ class App extends Component {
       </header>
         {this.state.error && <h1>{this.state.error}</h1>}
         {this.state.individualMovie ?
-          <Route path={`/${this.state.individualMovie.id}`}render= { ()=> <FocusCard movie={this.state.individualMovie} trailer={this.state.movieTrailer}/>} />
+          <Route exact path='movie/:id'render={({ match }) => { return <FocusCard movie={this.state.individualMovie} trailer={this.state.movieTrailer}/>}} />
           : <MovieContainer movies={this.state.movies} handleChange={this.handleChange} /> }
       </main>
     )

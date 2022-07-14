@@ -12,6 +12,7 @@ const MoviesCard = (props) => {
     <img className='movie-poster' src={props.imageUrl}>
 		</img>
 		<h1 className='movie-title'>{props.title}</h1>
+
   </div>
 </Link>)
 };
