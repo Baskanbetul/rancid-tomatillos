@@ -1,6 +1,7 @@
 import React from 'react'
 import './FocusCard.css'
 import MovieTrailer from './MovieTrailer';
+import { Link } from 'react-router-dom'
 
 const FocusCard = ({movie, trailer}) => {
 		return (

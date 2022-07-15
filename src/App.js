@@ -11,7 +11,7 @@ class App extends Component {
     super();
     this.state = {
       movies: movieData.movies,
-      individualMovie: null,
+      individualMovie: '',
       error: null,
       movieTrailer: null
     }
@@ -45,16 +45,22 @@ class App extends Component {
   }
 
   render() {
+    console.log(this.state.individualMovie)
     return(
-      <main className='App'>
-      <header>
-        <button onClick={this.handleClick}>Moldy Pears</button>
-      </header>
-        {this.state.error && <h1>{this.state.error}</h1>}
-        {this.state.individualMovie ?
-          <Route exact path='movie/:id'render={({ match }) => { return <FocusCard movie={this.state.individualMovie} trailer={this.state.movieTrailer}/>}} />
-          : <MovieContainer movies={this.state.movies} handleChange={this.handleChange} /> }
-      </main>
+      <>
+        <main className='App'>
+          <header>
+            <button onClick={this.handleClick}>Moldy Pears</button>
+          </header>
+            {this.state.error && <h1>{this.state.error}</h1>}
+        </main>
+          <Route exact path="/">
+              <MovieContainer movies={this.state.movies} handleChange={this.handleChange} />
+          </Route>
+          <Route exact path={`/${this.state.individualMovie.id}`}>
+              <FocusCard movie={this.state.individualMovie} trailer={this.state.movieTrailer}/>
+          </Route>
+        </>
     )
    }
 }
