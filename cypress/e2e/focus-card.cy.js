@@ -37,8 +37,7 @@ it('Should have the correct URL', () => {
 
   it('Should go back to home page when user clicks Moldy Pears', () => {
     cy.get('header').click()
-    
-
+    cy.url().should('eq', 'http://localhost:3000/');
   })
 })
 
