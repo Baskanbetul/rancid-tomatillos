@@ -31,21 +31,14 @@ it('Should see extra info about movie after click it', () => {
 	});
 })
 
-it('Should have a trailer if there is one', () => {
-  cy.get('.focus-card').within(() => {
-    cy.get('.movie-overview').within(() => {
-      cy.get('MovieTrailer'); //HERE WE ll keep looking at it 
-    })
+it('Should have the correct URL', () => {
+  cy.url().should('eq', 'http://localhost:3000/337401')
+  })
+
+  it('Should go back to home page when user clicks Moldy Pears', () => {
+    cy.get('header').click()
+    cy.url().should('eq', 'http://localhost:3000/');
   })
 })
-})
-
-//click moldpear go back to main page 
 
 
-	// "id": 337401,
-	// 		"poster_path": "https://image.tmdb.org/t/p/original//aKx1ARwG55zZ0GpRvU2WrGrCG9o.jpg",
-	// 		"backdrop_path": "https://image.tmdb.org/t/p/original//zzWGRw277MNoCs3zhyG3YmYQsXv.jpg",
-	// 		"title": "Mulan",
-	// 		"average_rating": 4.909090909090909,
-	// 		"release_date": "2020-09-04"

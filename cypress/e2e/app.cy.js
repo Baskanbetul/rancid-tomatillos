@@ -29,15 +29,15 @@ it('Should show error message if server is down', () => {
   })
 })
 
-//when a user clicks on a movie icon the view should change to the focus card.
+it('Should have correct URL for main page', () => {
+  cy.url().should('eq', 'http://localhost:3000/');	
+})
 
-it('should see new movie information when user clicks on movie icon', () => {
+it('should see new movie information when user clicks on movie icon and have correct URL', () => {
   cy.get('.movie-container').within(() => {
     cy.get('.card').eq(1).click()
-
-    // assert url
-  //  cy.url().should('contain', //MOVIE ID WE WANT TO TEST)
+		cy.url().should('eq', 'http://localhost:3000/337401');	
+    })
   })
-})
 
 })
