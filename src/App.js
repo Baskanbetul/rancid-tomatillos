@@ -4,7 +4,7 @@ import { Component } from 'react';
 import MovieContainer from './MovieContainer.js'
 import movieData from './movieData';
 import FocusCard from './FocusCard';
-import {Route} from 'react-router-dom'
+import {Link, Route} from 'react-router-dom'
 
 class App extends Component {
   constructor() {
@@ -41,7 +41,7 @@ class App extends Component {
   }
 
   handleClick = (event) => {
-    this.setState({individualMovie: null, movieTrailer: null})
+    this.setState({individualMovie: '', movieTrailer: null})
   }
 
   render() {
@@ -50,7 +50,9 @@ class App extends Component {
       <>
         <main className='App'>
           <header>
-            <button onClick={this.handleClick}>Moldy Pears</button>
+            <Link to ='/'>
+            <button className="home-button" onClick={this.handleClick}>Moldy Pears</button>
+            </Link>
           </header>
             {this.state.error && <h1>{this.state.error}</h1>}
         </main>
