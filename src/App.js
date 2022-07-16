@@ -4,13 +4,14 @@ import { Component } from 'react';
 import MovieContainer from './MovieContainer.js'
 import movieData from './movieData';
 import FocusCard from './FocusCard';
+import {Route} from 'react-router-dom'
 
 class App extends Component {
   constructor() {
     super();
     this.state = {
       movies: movieData.movies,
-      individualMovie: null,
+      individualMovie: '',
       error: null,
       movieTrailer: null
     }
@@ -44,14 +45,22 @@ class App extends Component {
   }
 
   render() {
+    console.log(this.state.individualMovie)
     return(
-      <main className='App'>
-      <header>
-        <button onClick={this.handleClick}>Moldy Pears</button>
-      </header>
-        {this.state.error && <h1>{this.state.error}</h1>}
-        {this.state.individualMovie ? <FocusCard movie={this.state.individualMovie} trailer={this.state.movieTrailer}/> : <MovieContainer movies={this.state.movies} handleChange={this.handleChange} /> }
-      </main>
+      <>
+        <main className='App'>
+          <header>
+            <button onClick={this.handleClick}>Moldy Pears</button>
+          </header>
+            {this.state.error && <h1>{this.state.error}</h1>}
+        </main>
+          <Route exact path="/">
+              <MovieContainer movies={this.state.movies} handleChange={this.handleChange} />
+          </Route>
+          <Route exact path={`/${this.state.individualMovie.id}`}>
+              <FocusCard movie={this.state.individualMovie} trailer={this.state.movieTrailer}/>
+          </Route>
+        </>
     )
    }
 }
