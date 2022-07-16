@@ -2,7 +2,8 @@ import React from "react";
 import MoviesCard from './MoviesCard.js';
 import './MovieContainer.css';
 
-const MovieContainer = ({movies,handleChange}) => {
+const MovieContainer = ({movies, handleChange}) => {
+  console.log('look',movies)
   const cards = movies.map(movie => {
     return (
       <MoviesCard
