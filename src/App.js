@@ -5,12 +5,13 @@ import MovieContainer from './MovieContainer.js'
 import movieData from './movieData';
 import FocusCard from './FocusCard';
 import {Link, Route} from 'react-router-dom'
+import fetchMovies from './apiCalls'
 
 class App extends Component {
   constructor() {
     super();
     this.state = {
-      movies: movieData.movies,
+      movies: [],
       individualMovie: '',
       error: null,
       movieTrailer: null
@@ -18,26 +19,19 @@ class App extends Component {
   }
 
   componentDidMount = () => {
-    fetch('https://rancid-tomatillos.herokuapp.com/api/v2/movies')
-			.then((response) => response.json())
-			.then((data) => {this.setState({movies: data.movies});
-			})
-			.catch((error) => {
-        this.setState({ error:`Sorry looks like there is a server error, please try again later`});
-			});
+    fetchMovies('').then(data => {
+      this.setState({movies: data.movies});
+    })
   }
 
   handleChange = (id) => {
-    fetch(`https://rancid-tomatillos.herokuapp.com/api/v2/movies/${id}`)
-			.then((response) => response.json())
-			.then((data) => {
-				this.setState({ individualMovie: data.movie });
-			})
-			fetch(`https://rancid-tomatillos.herokuapp.com/api/v2/movies/${id}/videos`)
-      .then(response => response.json())
-      .then(data => {
-        this.setState({movieTrailer:data.videos})
-      })
+    fetchMovies(`/${id}`).then(data => {
+      this.setState({ individualMovie: data.movie,
+    })
+    fetchMovies(`/${id}/videos`).then( data => {
+        this.setState({movieTrailer: data.videos})
+    })
+    });
   }
 
   handleClick = (event) => {
@@ -45,7 +39,6 @@ class App extends Component {
   }
 
   render() {
-    console.log(this.state.individualMovie)
     return(
       <>
         <main className='App'>
