@@ -17,15 +17,15 @@ class App extends Component {
     }
   }
 
-  componentDidMount = () => {
-    fetch('https://rancid-tomatillos.herokuapp.com/api/v2/movies')
-			.then((response) => response.json())
-			.then((data) => {this.setState({movies: data.movies});
-			})
-			.catch((error) => {
-        this.setState({ error:`Sorry looks like there is a server error, please try again later`});
-			});
-  }
+  // componentDidMount = () => {
+  //   fetch('https://rancid-tomatillos.herokuapp.com/api/v2/movies')
+	// 		.then((response) => response.json())
+	// 		.then((data) => {this.setState({movies: data.movies});
+	// 		})
+	// 		.catch((error) => {
+  //       this.setState({ error:`Sorry looks like there is a server error, please try again later`});
+	// 		});
+  // }
 
   handleChange = (id) => {
     fetch(`https://rancid-tomatillos.herokuapp.com/api/v2/movies/${id}`)
