@@ -18,18 +18,19 @@
 }
 
 .movie-poster-large {
-    width: 15vw;
-    height: 40vh;
+    width: 16vw;
+    height: 43vh;
     margin: 0;
 }
 
 .movie-specs {
   background: rgb(255,255,255, .7);
   font-size: .5rem;
-  width: 15vw;
-  height: 15vh;
+  width: 14.5vw;
+  height: 13vh;
   border-radius: 2%;
-  margin-top: 2vh;
+  margin-top: -18vh;
+  padding: 10px;
 }
 
 .details {
@@ -39,7 +40,7 @@
 
 .movie-overview {
   width: 50vw;
-  height: 50vh;
+  height: 55vh;
   background: rgb(255, 255, 255, .7);
   border-radius: 2%;
   display: flex;
@@ -51,5 +52,5 @@
 
 .movie-info {
   font-size: large;
-  
+
 }
