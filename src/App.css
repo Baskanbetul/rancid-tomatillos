@@ -6,7 +6,7 @@ html {
 
 main {
   width: 100vw;
-  height: 100vh;
+  height: 30vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -14,11 +14,19 @@ main {
 
 header {
   width: 100vw;
-  height: 20vh;
+  height: 40vh;
   background-color: #3BB78A;
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.home-button {
+  background-image: url("PearLogo.png");
+  background-size: contain;
+  height: 250px;
+  width: 250px;
+  background-repeat: no-repeat;
 }
 
 button {

@@ -11,7 +11,7 @@ const FocusCard = ({movie, trailer}) => {
 	    		<img className='movie-poster-large' src={movie.poster_path}></img>
 					<div className='movie-overview'>
 						<h1>{movie.title}</h1>
-						<p>{movie.overview}</p>
+						<p className='movie-info'>{movie.overview}</p>
 						<MovieTrailer trailer={trailer} />
 					</div>
 					<div className='movie-specs'>
