@@ -44,7 +44,7 @@ class App extends Component {
         <main className='App'>
           <header>
             <Link to ='/'>
-            <button className="home-button" onClick={this.handleClick}>Moldy Pears</button>
+            <button className="home-button" onClick={this.handleClick}></button>
             </Link>
           </header>
             {this.state.error && <h1>{this.state.error}</h1>}

@@ -5,8 +5,8 @@
 }
 
 .movie-poster {
-  width: 10vw;
-  height: 25vh;
+  width: 20vw;
+  height: 50vh;
 }
 
 .card:hover {
@@ -14,13 +14,13 @@
 }
 
 .movie-title {
-  font-size: 1rem;
-  width: 10vw;
+  font-size: 3rem;
+  width: 20vw;
 }
 
 .movie-rating {
   color: red;
-  font-size: 1.2rem;
+  font-size: 1.7rem;
   margin: 0;
 }
 
@@ -28,13 +28,13 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 35px;
-  height: 35px;
+  width: 55px;
+  height: 55px;
   border-radius: 50%;
   background-color: rgba(223, 232, 219, .8);
   float: left;
   margin-left: 5px;
-  margin-bottom: -50px;
+  margin-bottom: -90px;
   position: relative;
   z-index: 1;
 }
