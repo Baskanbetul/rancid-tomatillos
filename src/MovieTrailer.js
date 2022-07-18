@@ -13,9 +13,9 @@ const MovieTrailer = ({trailer}) => {
     url = `https://www.vimeo.com/${findTrailer.key}`
 
   return (
-			<ReactPlayer url={`https://www.youtube.com/watch?v=${findTrailer.key}`}
+			<ReactPlayer url={url}
       width= '60%'
-      height= '60%'    
+      height= '60%'
 			/>
 	);
     }
