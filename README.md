@@ -1,70 +1,60 @@
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+![MoldyPear](src/PearLogo.png)
 
-## Available Scripts
+## Table of Contents
+- [Introduction](#introduction)
+- [Technologies](#technologies)
+- [Set Up](#set-up)
+- [Deployment Link](#deployment-link)
+- [Features](#features)
+- [Reflection](#reflection)
+- [Future Features](#future-features)
+- [Contributors](#contributors)
+- [Project Specifications](#project-specifications)
 
-In the project directory, you can run:
+### Introduction
 
-### `npm start`
+**Moldy Pears** Here to help you find your next entertainment fix!  Scroll through and find the ranked movie that so fits your desire.  
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### Technologies
+- JavaScript
+- React
+- Cypress
+- React-Router
+- HTML
+- CSS
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### Set Up
+1. Clone this [repository](https://github.com/Baskanbetul/rancid-tomatillos).
+2. `cd` into the directory.
+3. Run `npm i install`.
+4. Run `npm start`.
 
-### `npm test`
+### Features
+![MoldyPears](src/MoldyPears-illustration.gif)
+- User can scroll through and pick a movie to get more info on
+- When user clicks on a movie it redirects them to a new webpage.
+- User can click the Moldy Pears icon and return back to the home page.
+- Movie detail pages include a trailer the user can watch to get a taste of the movie
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Reflections
+- During this project we learned how to research and implement new technologies in a short amount of time. By taking time to research what we needed from the new technologies we were able to implement them in a more timely manner.
+- Although the learning curve for cypress was a bit steep at first, it was extremely rewarding.  Cypress made it possible to test error handling with our server, and made sure we could test different user flows.
 
-### `npm run build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Future Features
+- A search bar to search for movies and have them live filter.
+- Categories of genre
+- Organization by cast
+- User login
+- User can save movies they've watched and input their own rating
+- User can put movies in a future queue
+- User can put movies in a favorite section
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Contributors
+- [Betul Baskan](https://github.com/Baskanbetul)[LinkedIn](https://www.linkedin.com/in/betul-baskan-9835481b9/)
+- [Blue Nealis](https://github.com/BlueNealis/)[LinkedIn](https://www.linkedin.com/in/blue-nealis/)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+### Project Specifications
+- Project specs are located [here](https://frontend.turing.edu/projects/module-3/rancid-tomatillos-v3.html).
