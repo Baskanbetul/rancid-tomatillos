@@ -30,6 +30,10 @@
 3. Run `npm i install`.
 4. Run `npm start`.
 
+### Deployment Link 
+
+👉 [Click here](https://rancid-tomatillos-bb.herokuapp.com/)
+
 ### Features
 ![MoldyPears](src/MoldyPears-illustration.gif)
 - User can scroll through and pick a movie to get more info on
