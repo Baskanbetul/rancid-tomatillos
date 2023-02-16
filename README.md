@@ -32,7 +32,7 @@
 
 ### Deployment Link 
 
-👉 [Click here](https://rancid-tomatillos-bb.herokuapp.com/)
+👉 [Click here](https://rancid-tomatillos-orpin.vercel.app/)
 
 ### Features
 ![MoldyPears](src/MoldyPears-illustration.gif)
